@@ -88,5 +88,49 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    
+    int tabuleiro1[10][10];
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            tabuleiro1[i][j] = 0;
+        }
+    }
+
+    int naviot1[4][2] = { {0, 3}, {1,2}, {1, 3},};
+    int naviot2[3][2] = { {1, 4}, {2, 1}, {2, 2} };
+    int naviot3[3][2] = {{2, 3}, {4, 3}, {5,2}};
+    int naviot4[3][2] = {{5,3}, {5,4}, {6,3}};
+    int naviot5[3][2] = {{2, 4}, {2,5}, {6,3}};
+    
+    // Colocar navios no tabuleiro
+    for (int i = 0; i < 3; i++) {
+        tabuleiro1[naviot1[i][0]][naviot1[i][1]] = 3;
+        tabuleiro1[naviot2[i][0]][naviot2[i][1]] = 3;
+        tabuleiro1[naviot3[i][0]][naviot3[i][1]] = 3;
+        tabuleiro1[naviot4[i][0]][naviot4[i][1]] = 3;
+
+        
+    }
+    // Exibir o tabuleiro atualizado
+    printf(" A B C D E F G H I J\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", coluna[i]);
+        for (int j = 0; j < 10; j++) {
+            if (tabuleiro1[i][j] == 0) {
+                printf("0 ");
+            } else {
+                printf("3 ");
+            }
+        }
+        printf("\n");
+    }
+    
+
+   
+    
+  
+     
+ 
+
     return 0;
 }
